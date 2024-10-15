@@ -2,7 +2,7 @@
     <?php if ($isError): displayErrors(); endif; ?>
     <h1 class="align-center">Formularz rejestracji użytkownika</h1>
     <div class="form">
-        <form method="post">
+        <form action="index.php" method="post">
             <div class="mb-4">
                 <label class="form-label" for="name">Imię</label>
                 <input id="name" class="form-control" type="text" name="name" placeholder="Imię" value="<?php if(isset($_POST['name']) && $isError): echo $_POST['name']; endif; ?>" require>

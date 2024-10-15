@@ -16,7 +16,7 @@ if ($res->num_rows > 0)
         $html .= '<td>' . $name . '</td>';
         $html .= '<td>' . $row['user_email'] . '</td>';
         $html .= '<td class="text-center">' . showStatusIcon($row['active']) . '</td>';
-        $html .= '<td><a class="action" href="?action=delete&id=' . $row ['id'] . '" title="usuń"><i class="fa fa-times text-danger"></i>usuń</a></td>';
+        $html .= '<td><a class="action" href="?action=delete&id=' . $row ['id'] . '" title="usuń" onclick="return confirm(\'Czy na pewno chcesz usunąć ten wpis?\');"><i class="fa fa-times text-danger"></i>usuń</a></td>';
         $html .= '</tr>';
 	}
     $html .= "</tbody>";
