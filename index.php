@@ -8,14 +8,17 @@ require('app/functions/validate.function.php');
 require('app/functions/helper.function.php');
 
 /*
-$page = isset($_REQUEST['page']) ? $page : 'users.html.php';
-$pageFile = 'templates' . DIRECTORY_SEPARATOR . $page . 'html.php';
-if (file_exists($pageFile))
+$page = isset($_GET['page']) ? $_GET['page'] : 'index';
+$action = isset($_GET['action]) ? $_GET['action]: 'index';
+if (is_file('templates' . DIRECTORY_SEPARATOR . $page . DIRECTORY_SEPARATOR . $action '.php'))
 {
-
+	
+}
+else
+{
+	die('Forget about it');
 }
 */
-
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	fieldRequired('Imię', $_POST['name']);
